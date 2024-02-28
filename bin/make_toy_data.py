@@ -1,7 +1,6 @@
 from __future__ import print_function
 
 from larcv import larcv
-from colored_msg import colored_msg as cmsg
 import os, sys
 import numpy as np
 import numpy.random as npr

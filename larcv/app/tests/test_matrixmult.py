@@ -2,7 +2,7 @@ import os,sys
 import ROOT
 import numpy as np
 from larcv import larcv
-print larcv.Image2D
+print(larcv.Image2D)
 
 # TESTS MATRIX MULTIPLICATION FEATURE
 
@@ -33,23 +33,23 @@ CI = aI*bI
 crows = CI.meta().rows()
 ccols = CI.meta().cols()
 
-print "A diff"
+print("A diff")
 Adiff = np.zeros( a.shape )
 for r in range(0,arows):
     for c in range(0,acols):
         Adiff[r,c] = aI.pixel(r,c)-a[r,c]
-print Adiff
+print(Adiff)
 
-print "B diff"
+print("B diff")
 Bdiff = np.zeros( b.shape )
 for r in range(0,brows):
     for c in range(0,bcols):
         Bdiff[r,c] = bI.pixel(r,c)-b[r,c]
-print Bdiff
+print(Bdiff)
 
-print "CDiff"
+print("CDiff")
 Cdiff = np.zeros( C.shape )
 for r in range(0,crows):
     for c in range(0,ccols):
         Cdiff[r,c] = CI.pixel(r,c)-C[r,c]
-print Cdiff
+print(Cdiff)

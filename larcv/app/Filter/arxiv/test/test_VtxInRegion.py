@@ -5,11 +5,11 @@ larcv.logger.force_level(0)
 #
 # Constants
 #
-MSG_LEVEL=larcv.msg.kERROR
+MSG_LEVEL=larcv.msg.Level_t.kERROR
 if 'debug' in sys.argv:
-    MSG_LEVEL = larcv.msg.kDEBUG
+    MSG_LEVEL = larcv.msg.Level_t.kDEBUG
 if 'info' in sys.argv:
-    MSG_LEVEL = larcv.msg.kINFO
+    MSG_LEVEL = larcv.msg.Level_t.kINFO
 
 OUT_FNAME="merger.root"
 NUM_EVENT=1

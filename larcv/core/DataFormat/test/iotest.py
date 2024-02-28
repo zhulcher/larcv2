@@ -1,5 +1,4 @@
 from larcv import larcv
-from colored_msg import colored_msg as cmsg
 import os, sys
 larcv.logger.force_level(0)
 
@@ -21,7 +20,7 @@ ERROR_ENTRY_MISSING   = 4
 ERROR_PRODUCT_MISSING = 5
 
 if os.path.isfile(OUT_FNAME):
-    cmsg.error("Test output file (%s) already exists..." % OUT_FNAME)
+    print("Test output file (%s) already exists..." % OUT_FNAME)
     sys.exit(ERROR_FILE_EXIST)
 #
 # Test Write
@@ -36,9 +35,9 @@ if not o.initialize():
 
 product_names = larcv.DataProductFactory.get().product_names()
     
-for idx in xrange(NUM_EVENT):
+for idx in range(NUM_EVENT):
 
-    for name_idx in xrange(product_names.size()):
+    for name_idx in range(product_names.size()):
 
         o.get_data(product_names[name_idx],"product_type%02d" % name_idx)
 
@@ -60,14 +59,14 @@ if not i.initialize():
 
 product_ctr={}
 entry_ctr=0
-for idx in xrange(NUM_EVENT):
+for idx in range(NUM_EVENT):
 
     if not i.read_entry(idx):
         break
     
     entry_ctr += 1
 
-    for name_idx in xrange(product_names.size()):
+    for name_idx in range(product_names.size()):
 
         name = product_names[name_idx]
         
@@ -80,12 +79,12 @@ for idx in xrange(NUM_EVENT):
 i.finalize()
 
 if not entry_ctr == NUM_EVENT:
-    cmsg.error("Read-back only found %d/%d events!" % (entry_ctr,NUM_EVENT))
+    print("Read-back only found %d/%d events!" % (entry_ctr,NUM_EVENT))
     sys.exit(ERROR_ENTRY_MISSING)
     
 for t,ctr in product_ctr.iteritems():
     if not ctr == NUM_EVENT:
-        cmsg.error("Product type %d (name %s) only has %d/%d count!" % (t,larcv.ProductName(t),ctr,NUM_EVENT))
+        print("Product type %d (name %s) only has %d/%d count!" % (t,larcv.ProductName(t),ctr,NUM_EVENT))
         sys.exit(ERROR_PRODUCT_MISSING)
         break
 print product_ctr

@@ -4,22 +4,22 @@ import matplotlib.pyplot as plt
 def print_mat(mat):
 
     img_array=ROOT.larcv.as_ndarray(mat)
-    for row in xrange(mat.meta().rows()):
-        for col in xrange(mat.meta().cols()):
-            print int(mat.pixel(row,col)),
-        print
-    print
+    for row in range(mat.meta().rows()):
+        for col in range(mat.meta().cols()):
+            print(int(mat.pixel(row,col)),)
+        print()
+    print()
 
 def main():
 
-    print
+    print()
     ncols=24
     nrows=24
 
     img=ROOT.larcv.Image2D(nrows,ncols)
     img.paint(0)
-    for row in xrange(nrows):
-        for col in xrange(ncols):
+    for row in range(nrows):
+        for col in range(ncols):
             v=0
             if row==col: v+=1
             if (row+col - nrows) % 4==0: v+=1

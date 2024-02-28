@@ -8,8 +8,8 @@ plt.imshow(img_array)
 roi = ROOT.larcv.ROI()
 bb_v  = [ ROOT.larcv.ImageMeta(img.meta().cols()/2, img.meta().rows()/2,
                                img.meta().rows()/2, img.meta().cols()/2,
-                               img.meta().min_x()+25*i,
-                               img.meta().max_y()-25*i,i) for i in xrange(3) ]
+                               int(img.meta().min_x()+25*i),
+                               int(img.meta().max_y()-25*i),i) for i in range(3) ]
 
 for ix,bb in enumerate(bb_v):
     roi.AppendBB(bb)

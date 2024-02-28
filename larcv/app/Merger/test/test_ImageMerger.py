@@ -5,11 +5,11 @@ larcv.logger.force_level(0)
 #
 # Constants
 #
-MSG_LEVEL=larcv.msg.kERROR
+MSG_LEVEL=larcv.msg.Level_t.kERROR
 if 'debug' in sys.argv:
-    MSG_LEVEL = larcv.msg.kDEBUG
+    MSG_LEVEL = larcv.msg.Level_t.kDEBUG
 if 'info' in sys.argv:
-    MSG_LEVEL = larcv.msg.kINFO
+    MSG_LEVEL = larcv.msg.Level_t.kINFO
 
 OUT_FNAME="merger.root"
 NUM_EVENT=1
@@ -58,19 +58,19 @@ mask.initialize()
 if not o.initialize():
     sys.exit(ERROR_WRITE_INIT)
 
-for idx in xrange(NUM_EVENT):
+for idx in range(NUM_EVENT):
     
     #we have to make the image from ImageMeta if we are going to
     #use channel status as it checks image2d.plane
     meta1=larcv.ImageMeta(10,10,10,10,0,10,0)
     img1 = larcv.Image2D(meta1)
-    for x in xrange(img1.as_vector().size()):
+    for x in range(img1.as_vector().size()):
         if x%2 == 0: img1.set_pixel(x,10)
         else: img1.set_pixel(x,0)
     
     meta2=larcv.ImageMeta(10,10,10,10,0,10,0)
     img2 = larcv.Image2D(meta2)
-    for x in xrange(img2.as_vector().size()):
+    for x in range(img2.as_vector().size()):
         img2.set_pixel(x,10)
         if (x/10)%2 == 0: img2.set_pixel(x,0)
 
@@ -144,8 +144,8 @@ for idx in xrange(NUM_EVENT):
 
     combined_tpc_img = combined_ev_tpc_img.Image2DArray()[0];
     
-    for r in xrange(combined_tpc_img.meta().rows()):
-        for c in xrange(combined_tpc_img.meta().cols()):
+    for r in range(combined_tpc_img.meta().rows()):
+        for c in range(combined_tpc_img.meta().cols()):
             px=combined_tpc_img.pixel(r,c)
             
             #bad wires
@@ -157,7 +157,7 @@ for idx in xrange(NUM_EVENT):
             if r%2 == 0 and c%2 == 1: 
                 assert px == 20.0
                 continue
-    print "PASS event: ",idx
+    print("PASS event: ",idx)
     o.save_entry()
 
     idx+=1

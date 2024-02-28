@@ -6,8 +6,8 @@ k=ROOT.larcv.Image2D('Sakura.png')
 #sys.stdin.readline()
 
 j=ROOT.larcv.imread(k)
-print type(j)
-print len(j),len(j[0])
+print(type(j))
+print(len(j),len(j[0]))
 
 import matplotlib.pyplot as plt
 img=plt.imshow(j)

@@ -1,16 +1,16 @@
 from larcv import larcv
-from colored_msg import colored_msg as cmsg
+
 import os, sys
 larcv.logger.force_level(0)
 
 #
 # Constants
 #
-MSG_LEVEL=larcv.msg.kERROR
+MSG_LEVEL=larcv.msg.Level_t.kERROR
 if 'debug' in sys.argv:
-    MSG_LEVEL = larcv.msg.kDEBUG
+    MSG_LEVEL = larcv.msg.Level_t.kDEBUG
 if 'info' in sys.argv:
-    MSG_LEVEL = larcv.msg.kINFO
+    MSG_LEVEL = larcv.msg.Level_t.kINFO
 
 OUT_FNAME="croproi.root"
 NUM_EVENT=1
@@ -19,7 +19,7 @@ ERROR_FILE_EXIST      = 1
 ERROR_WRITE_INIT      = 2
 
 if os.path.isfile(OUT_FNAME):
-    cmsg.error("Test output file (%s) already exists..." % OUT_FNAME)
+    print("Test output file (%s) already exists..." % OUT_FNAME)
     sys.exit(ERROR_FILE_EXIST)
 
 from larcv import larcv

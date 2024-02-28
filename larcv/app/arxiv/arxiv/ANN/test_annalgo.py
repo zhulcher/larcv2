@@ -30,4 +30,4 @@ algo.printdata()
 # DUMP
 algo.dump( "anntest.dmp" )
 
-print "Made it!"
+print("Made it!")

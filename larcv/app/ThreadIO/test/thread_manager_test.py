@@ -42,7 +42,7 @@ while 1:
         fout.write('{:g},{:d},{:d}\n'.format(elapsed_time,event_read,data_read))
         
     status_v = proc.storage_status_array()
-    for storage_id in xrange(status_v.size()):
+    for storage_id in range(status_v.size()):
         status = int(status_v[storage_id])
         if status == 3:
             for idx, name in enumerate(names):
@@ -61,7 +61,7 @@ while 1:
     ctr+=1
 
 ctrs=proc.thread_exec_counters()
-for i in xrange(ctrs.size()):
+for i in range(ctrs.size()):
     print(ctrs[i])
 
 
