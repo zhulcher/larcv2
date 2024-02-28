@@ -36,7 +36,7 @@ namespace larcv {
     /// ctor from ImageMeta and 1D array data
     Image2D(const ImageMeta&, const std::vector<float>&);
     /// copy ctor
-    Image2D(const Image2D&);
+    // Image2D(const Image2D&);
     
 #ifndef __CINT__
     /// attribute move ctor

@@ -36,10 +36,10 @@ namespace larcv {
     virtual ~PSet(){};
 
     /// Copy ctor
-    PSet(const PSet& orig) : _name       ( orig._name       )
-			   , _data_value ( orig._data_value )
-			   , _data_pset  ( orig._data_pset  )
-    {}
+    // PSet(const PSet& orig) : _name       ( orig._name       )
+		// 	   , _data_value ( orig._data_value )
+		// 	   , _data_pset  ( orig._data_pset  )
+    // {}
 
     /// name getter
     inline const std::string& name() const { return _name; }

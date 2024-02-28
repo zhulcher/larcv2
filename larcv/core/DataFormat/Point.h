@@ -27,7 +27,7 @@ namespace larcv {
     Point2D(double xv=0, double yv=0) : x(xv), y(yv) {}
     ~Point2D() {}
 
-    Point2D(const Point2D& pt) : x(pt.x), y(pt.y) {};
+    // Point2D(const Point2D& pt) : x(pt.x), y(pt.y) {};
 
     double x, y;
     
@@ -72,7 +72,7 @@ namespace larcv {
     Point3D(double xv=0, double yv=0, double zv=0) : x(xv), y(yv), z(zv) {}
     ~Point3D() {}
 
-    Point3D(const Point3D& pt) : x(pt.x), y(pt.y), z(pt.z) {}
+    // Point3D(const Point3D& pt) : x(pt.x), y(pt.y), z(pt.z) {}
 
     double x, y, z;
     

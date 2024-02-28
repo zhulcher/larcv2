@@ -20,10 +20,10 @@ namespace larcv {
     , _meta(meta)
   { if (img.size() != meta.rows() * meta.cols()) throw larbys("Inconsistent dimensions!"); }
 
-  Image2D::Image2D(const Image2D& rhs)
-    : _img(rhs._img)
-    , _meta(rhs._meta)
-  {}
+  // Image2D::Image2D(const Image2D& rhs)
+  //   : _img(rhs._img)
+  //   , _meta(rhs._meta)
+  // {}
 
   Image2D::Image2D(ImageMeta&& meta, std::vector<float>&& img)
     : _img(std::move(img))

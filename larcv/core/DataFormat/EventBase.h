@@ -36,11 +36,11 @@ namespace larcv {
       , _event  (kINVALID_SIZE)
     {}
     /// Copy ctor
-    EventBase(const EventBase& rhs) : _producer(rhs._producer)
-				    , _run(rhs._run)
-				    , _subrun(rhs._subrun)
-				    , _event(rhs._event)
-    {}
+    // EventBase(const EventBase& rhs) : _producer(rhs._producer)
+		// 		    , _run(rhs._run)
+		// 		    , _subrun(rhs._subrun)
+		// 		    , _event(rhs._event)
+    // {}
 				      
     /// Default destructor
     virtual ~EventBase(){}
