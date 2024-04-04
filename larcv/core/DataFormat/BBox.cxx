@@ -72,7 +72,7 @@ namespace larcv {
   std::string BBox2D::dump() const
   {
     std::stringstream ss;
-    ss << "    (" << _p1.x << "," << _p1.y << ") => (" << _p2.x << "," << _p2.y << ")" << std::endl;;
+    ss << "    (" << _p1.x << "," << _p1.y << ") => (" << _p2.x << "," << _p2.y << ")" << std::endl;
     return ss.str();
   }
 
@@ -169,7 +169,7 @@ namespace larcv {
   std::string BBox3D::dump() const
   {
     std::stringstream ss;
-    ss << "    (" << _p1.x << "," << _p1.y << "," << _p1.z << ") => (" << _p2.x << "," << _p2.y << "," << _p2.z << ")" << std::endl;;
+    ss << "    (" << _p1.x << "," << _p1.y << "," << _p1.z << ") => (" << _p2.x << "," << _p2.y << "," << _p2.z << ")" << std::endl;
     return ss.str();
   }
 

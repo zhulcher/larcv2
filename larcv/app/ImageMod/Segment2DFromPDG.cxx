@@ -154,10 +154,10 @@ namespace larcv {
 
     LARCV_INFO() << "Found " << n_surrounding_pixel << " pixels surrounding non-zero pixels ..." << std::endl;
     LARCV_INFO() << "Weight: " << surrounding_weight << std::endl;
-    int ahoaho=0;
+    // int ahoaho=0;
     for(auto const& v : _boundary_data) {
       if(v<1) continue;
-      ahoaho += 1;
+      // ahoaho += 1;
     }
     /*
     auto weight_data = weight_image.move();

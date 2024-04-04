@@ -125,7 +125,7 @@ namespace larcv {
      larcv::VoxelSet res_data;
      for (auto const& vox : ev_tensor3d.as_vector()) {
        LARCV_DEBUG() << "Re-mapping vox ID " << vox.id() << " charge " << vox.value() << std::endl;
-       float sum_charge = 0.;
+      //  float sum_charge = 0.;
        auto const pos = meta.position(vox.id());
 
        double xpos = pos.x - _numvox_v[0] * meta.size_voxel_x();
@@ -154,7 +154,7 @@ namespace larcv {
               if(charge > _division_threshold) {
                 LARCV_DEBUG() << "... to ID " << id << " charge " << charge << std::endl;
                 res_data.emplace(id, charge, true);
-                sum_charge += charge;
+                // sum_charge += charge;
               }
             }
             zpos += meta.size_voxel_z();

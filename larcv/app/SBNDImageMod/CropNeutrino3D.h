@@ -50,7 +50,7 @@ namespace larcv {
     int _output_n_z;
     std::vector<std::string>  _producer_names_v;
     std::vector<std::string>  _product_types_v;
-    std::vector<std::string>  _output_producers_v;;
+    std::vector<std::string>  _output_producers_v;
 
   };
 

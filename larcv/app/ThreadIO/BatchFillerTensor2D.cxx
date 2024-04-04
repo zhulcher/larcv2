@@ -112,13 +112,13 @@ bool BatchFillerTensor2D::process(IOManager& mgr) {
 
     // Check that this projection ID is in the lists of channels:
     bool found = false;
-    int count = 0;
+    // int count = 0;
     for (auto & channel : _slice_v){
       if (channel == projection_id){
         found = true;
         break;
       }
-      count ++;
+      // count ++;
     }
     if (!found) continue;
 

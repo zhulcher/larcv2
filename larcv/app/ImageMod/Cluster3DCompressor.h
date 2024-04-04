@@ -45,7 +45,7 @@ namespace larcv {
     void configure_labels(const PSet& cfg);
 
     enum PoolType_t {kMaxPool,kSumPool};
-    PoolType_t _pool_type;
+    // PoolType_t _pool_type;
     std::vector<unsigned short> _pool_type_v;
     std::vector<std::string> _cluster3d_producer_v;
     std::vector<std::string> _output_producer_v;

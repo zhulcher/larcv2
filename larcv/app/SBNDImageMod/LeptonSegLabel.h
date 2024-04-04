@@ -54,8 +54,8 @@ class LeptonSegLabel : public ProcessBase {
   std::string _cluster2d_producer;
   std::string _output_producer;
   std::string _particle_producer;
-  int _lepton_label;
-  int _other_label;
+  // int _lepton_label;
+  // int _other_label;
 
 };
 
