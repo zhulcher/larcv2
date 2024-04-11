@@ -8,7 +8,7 @@
 namespace larcv {
 
     Flash::Flash(double time, double timeWidth, double absTime, unsigned int frame,
-        std::vector<double> PEPerOpDet,
+        std::vector<double> PEPerOpDet, unsigned int tpc,
         bool inBeamFrame, int onBeamTime, double fastToTotal,
         double xCenter, double xWidth,
         double yCenter, double yWidth,
