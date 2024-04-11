@@ -18,6 +18,7 @@ namespace larcv {
         InstanceID_t id)
         : _id(id)
         , _time(time)
+        , _tpc(tpc)
         , _timeWidth(timeWidth)
         , _absTime  (absTime)
         , _frame    (frame)
