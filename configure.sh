@@ -35,8 +35,9 @@ else
 fi
 if [[ $LARCV_PYVERSION -gt 2 ]]
 then
-    minor=$(python3 -c "import sys; print(sys.version_info.minor)")
-    export LARCV_PYTHON_CONFIG=python${LARCV_PYVERSION}.${minor}-config
+    export LARCV_PYTHON_CONFIG=python3-config
+#    minor=$(python3 -c "import sys; print(sys.version_info.minor)")
+#    export LARCV_PYTHON_CONFIG=python${LARCV_PYVERSION}.${minor}-config
 fi
 
 export LARCV_COREDIR=$LARCV_BASEDIR/larcv/core
