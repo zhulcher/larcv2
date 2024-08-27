@@ -369,7 +369,6 @@ namespace larcv {
     LARCV_DEBUG() << "Current input tree index: " << _in_tree_index << std::endl;
     return true;
   }
- 
   bool IOManager::save_entry()
   {
     LARCV_DEBUG() << "start" << std::endl;
@@ -449,6 +448,7 @@ namespace larcv {
 
     return true;
   }
+
   void IOManager::clear_entry()
   {
     for (auto& p : _product_ptr_v) {
@@ -552,6 +552,7 @@ namespace larcv {
     __ioman_mtx.unlock();
     return _product_ptr_v[id];
   }
+
   void IOManager::set_id(const size_t run, const size_t subrun, const size_t event) {
 
     if (_io_mode == kREAD) {
@@ -571,7 +572,8 @@ namespace larcv {
 
     _set_event_id = tmp;
 
-  } 
+  }
+
   void IOManager::set_id() {
     LARCV_DEBUG() << "start" << std::endl;
 
@@ -601,7 +603,8 @@ namespace larcv {
       }
 
     }
-  }    
+  }
+
   void IOManager::finalize()
   {
     LARCV_DEBUG() << "start" << std::endl;
