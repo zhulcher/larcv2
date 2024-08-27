@@ -369,6 +369,7 @@ namespace larcv {
     LARCV_DEBUG() << "Current input tree index: " << _in_tree_index << std::endl;
     return true;
   }
+
   bool IOManager::save_entry()
   {
     LARCV_DEBUG() << "start" << std::endl;
