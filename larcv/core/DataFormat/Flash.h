@@ -28,7 +28,7 @@ namespace larcv {
 
         /// Default constructor
         Flash(double time=0, double timeWidth=0, double absTime=0, unsigned int frame=0,
-            std::vector<double> PEPerOpDet=std::vector<double>(0), unsigned int tpc=100,
+            std::vector<double> PEPerOpDet=std::vector<double>(0), unsigned int volume_id=100,
             bool inBeamFrame=0, int onBeamTime=0, double fastToTotal=1,
             double xCenter=0, double xWidth=0,
             double yCenter=0, double yWidth=0,
@@ -45,7 +45,7 @@ namespace larcv {
         /// Getters
         inline InstanceID_t id         () const { return _id;         }
         inline double time () const { return _time; }
-        inline unsigned int tpc () const { return _tpc; }
+        inline unsigned int volume_id () const { return _volume_id; }
         inline double timeWidth () const { return _timeWidth; }
         inline double absTime () const { return _absTime; }
         inline unsigned int frame () const { return _frame; }
@@ -65,7 +65,7 @@ namespace larcv {
         /// Setters
         inline void id (InstanceID_t id  )  { _id = id;         }
         inline void time (double time) { _time = time; }
-        inline void tpc (unsigned int tpc) { _tpc = tpc; }
+        inline void volume_id (unsigned int volume_id) { _volume_id = volume_id; }
         inline void timeWidth (double timeWidth) { _timeWidth = timeWidth; }
         inline void absTime (double absTime) { _absTime = absTime; }
         inline void frame (unsigned int frame) { _frame = frame; }
@@ -88,7 +88,7 @@ namespace larcv {
 
         InstanceID_t   _id; ///< "ID" of this flash in FlashSet collection
         double _time; ///< Time on @ref DetectorClocksHardwareTrigger "trigger time scale" [us]
-        unsigned int _tpc; ///< ID of the hit TPC (0-7)
+        unsigned int _volume_id; ///< ID of the hit TPC (0-7)
         double _timeWidth; ///< Width of the flash in time [us]
         double _absTime; ///< Time by PMT readout clock
         unsigned int _frame; ///< Frame number
