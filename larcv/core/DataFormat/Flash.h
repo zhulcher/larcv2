@@ -27,8 +27,8 @@ namespace larcv {
     public:
 
         /// Default constructor
-        Flash(double time=0, double timeWidth=0, double absTime=0, unsigned int frame=0,
-            std::vector<double> PEPerOpDet=std::vector<double>(0), unsigned int volume_id=100,
+        Flash(double time=0, double timeWidth=0, double absTime=0, unsigned int frame=kINVALID_UINT,
+            std::vector<double> PEPerOpDet=std::vector<double>(0), unsigned int volume_id=kINVALID_UINT,
             bool inBeamFrame=0, int onBeamTime=0, double fastToTotal=1,
             double xCenter=0, double xWidth=0,
             double yCenter=0, double yWidth=0,
